@@ -1,10 +1,11 @@
-import userprofile from "./userprofile";
+import Userprofile from "./userprofile";
+import "./sidebar.css";
 
-function sidebar() {
+function Sidebar() {
   return (
     <div>
-      <userprofile />
+      <Userprofile />
     </div>
   );
 }
-export default sidebar;
+export default Sidebar;
