@@ -1,11 +1,13 @@
 import Userprofile from "./userprofile";
+import Filters from "./filters";
 import "./sidebar.css";
 
-function Sidebar() {
+const Sidebar = () => {
   return (
-    <div>
+    <div className="sidebar">
       <Userprofile />
+      <Filters />
     </div>
   );
-}
+};
 export default Sidebar;
