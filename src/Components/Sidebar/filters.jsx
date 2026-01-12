@@ -7,7 +7,10 @@ const Filters = () => {
           <li>Work</li>
           <li>Personal</li>
           <li>Shopping</li>
-          <li>Add</li>
+          <li>
+            <span></span>
+            <span>Add</span>
+          </li>
         </ul>
       </div>
       <div className="settings">
