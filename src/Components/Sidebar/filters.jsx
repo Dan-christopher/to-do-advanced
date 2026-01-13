@@ -1,4 +1,7 @@
+import React, { useState } from "react";
+
 const Filters = () => {
+  const [addTask, setAddTask] = useState(false);
   return (
     <div>
       <div className="filters">
@@ -8,8 +11,7 @@ const Filters = () => {
           <li>Personal</li>
           <li>Shopping</li>
           <li>
-            <span></span>
-            <span>Add</span>
+            <span onClick={() => setAddTask(true)}>Add</span>
           </li>
         </ul>
       </div>
