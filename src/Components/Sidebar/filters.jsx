@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Popup from "./popup";
 
 const Filters = () => {
   const [addTask, setAddTask] = useState(false);
@@ -18,6 +19,7 @@ const Filters = () => {
       <div className="settings">
         <h2>Settings</h2>
       </div>
+      {addTask && <Popup onClose={() => setAddTask(false)} />}
     </div>
   );
 };
