@@ -1,0 +1,56 @@
+/* Main Panel layout */
+.main-panel {
+  flex: 1; /* fill remaining space next to the sidebar */
+  min-height: 100vh;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0.02), transparent);
+  box-sizing: border-box;
+}
+
+/* Header styles */
+.main-header {
+  background: linear-gradient(
+    90deg,
+    rgba(107, 90, 237, 0.12),
+    rgba(46, 211, 201, 0.06)
+  );
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 15, 20, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.main-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 2rem;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.main-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+/* Light-mode adjustments */
+@media (prefers-color-scheme: light) {
+  .main-header {
+    background: linear-gradient(
+      90deg,
+      rgba(107, 90, 237, 0.08),
+      rgba(46, 211, 201, 0.03)
+    );
+    border: 1px solid rgba(30, 30, 50, 0.04);
+  }
+  .main-header h1 {
+    color: #141420;
+  }
+  .main-header h2 {
+    color: #4a4a55;
+  }
+}
