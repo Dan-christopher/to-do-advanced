@@ -1,11 +1,11 @@
 :root {
   --sidebar-width: 340px;
-  --bg-start: #ffffffee;
-  --bg-end: #f3f6ffee;
-  --border: rgba(30, 30, 50, 0.04);
-  --shadow-1: rgba(40, 44, 63, 0.06);
-  --accent: #6b5aed;
-  --accent-strong: rgba(107, 90, 237, 0.18);
+  --bg-start: #ffffff;
+  --bg-end: #f9f7ff;
+  --border: rgba(124, 92, 255, 0.08);
+  --shadow-1: rgba(0, 0, 0, 0.08);
+  --accent: #ff6b9d;
+  --accent-strong: rgba(255, 107, 157, 0.15);
   --muted: #777a88;
 }
 
@@ -21,10 +21,14 @@
   position: relative;
   background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
   border-right: 1px solid var(--border);
-  box-shadow: 0 10px 30px var(--shadow-1),
+  box-shadow:
+    0 10px 30px var(--shadow-1),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
-  transition: width 280ms ease, transform 220ms ease, box-shadow 300ms ease;
+  transition:
+    width 280ms ease,
+    transform 220ms ease,
+    box-shadow 300ms ease;
 }
 
 /* Enhanced decorative floating blobs with more vibrant colors */
@@ -49,7 +53,9 @@
     rgba(46, 211, 201, 0.2),
     transparent 70%
   );
-  animation: float 10s ease-in-out infinite, pulse 8s ease-in-out infinite;
+  animation:
+    float 10s ease-in-out infinite,
+    pulse 8s ease-in-out infinite;
 }
 .sidebar::after {
   width: 240px;
@@ -62,7 +68,8 @@
     rgba(255, 159, 26, 0.15),
     transparent 70%
   );
-  animation: float 14s ease-in-out infinite reverse,
+  animation:
+    float 14s ease-in-out infinite reverse,
     pulse 10s ease-in-out infinite;
 }
 
@@ -147,7 +154,9 @@
   z-index: -1;
   opacity: 0.7;
   transform: scale(0.98);
-  transition: transform 300ms ease, opacity 300ms ease;
+  transition:
+    transform 300ms ease,
+    opacity 300ms ease;
 }
 .user-img:hover::after {
   opacity: 1;
@@ -159,14 +168,18 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 10px 30px rgba(30, 30, 60, 0.15),
+  box-shadow:
+    0 10px 30px rgba(30, 30, 60, 0.15),
     0 4px 12px rgba(107, 90, 237, 0.2);
-  transition: transform 300ms ease, box-shadow 300ms ease;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
   cursor: pointer;
 }
 .user-img img:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(30, 30, 60, 0.2),
+  box-shadow:
+    0 15px 40px rgba(30, 30, 60, 0.2),
     0 8px 20px rgba(107, 90, 237, 0.3);
 }
 
@@ -250,8 +263,8 @@
   opacity: 0;
   animation: slideInRight 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(124, 92, 255, 0.05);
+  border: 1px solid rgba(124, 92, 255, 0.1);
 }
 
 /* Staggered entrance with improved timing */
@@ -284,9 +297,10 @@
 .filters ul li:hover {
   transform: translateX(6px) scale(1.02);
   color: #151522;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 6px 20px rgba(40, 44, 63, 0.08),
-    0 2px 8px rgba(107, 90, 237, 0.1);
+  background: rgba(124, 92, 255, 0.08);
+  box-shadow:
+    0 6px 20px rgba(124, 92, 255, 0.12),
+    0 2px 8px rgba(255, 107, 157, 0.1);
 }
 
 /* Enhanced ripple effect */
@@ -300,14 +314,18 @@
   height: 30px;
   background: radial-gradient(circle, rgba(107, 90, 237, 0.3), transparent 70%);
   border-radius: 50%;
-  transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 500ms;
+  transition:
+    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 500ms;
   opacity: 0;
   pointer-events: none;
 }
 .filters ul li:active::after {
   transform: translate(-50%, -50%) scale(18);
   opacity: 1;
-  transition: transform 0s, opacity 0s;
+  transition:
+    transform 0s,
+    opacity 0s;
 }
 
 .filters ul li::before {
@@ -318,14 +336,16 @@
   height: 16px;
   border-radius: 50%;
   background: currentColor;
-  box-shadow: 0 4px 12px rgba(15, 15, 20, 0.15),
+  box-shadow:
+    0 4px 12px rgba(15, 15, 20, 0.15),
     inset 0 1px 2px rgba(255, 255, 255, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters ul li:hover::before {
   transform: scale(1.15) translateY(-2px);
-  box-shadow: 0 6px 16px rgba(15, 15, 20, 0.2),
+  box-shadow:
+    0 6px 16px rgba(15, 15, 20, 0.2),
     inset 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
@@ -346,17 +366,20 @@
 .filters ul li.active {
   background: linear-gradient(
     120deg,
-    rgba(107, 90, 237, 0.12),
-    rgba(46, 211, 201, 0.06)
+    rgba(255, 107, 157, 0.12),
+    rgba(255, 159, 208, 0.08)
   );
   color: var(--accent);
   font-weight: 700;
-  box-shadow: inset 4px 0 0 0 var(--accent), 0 4px 16px rgba(107, 90, 237, 0.15);
-  border: 1px solid rgba(107, 90, 237, 0.2);
+  box-shadow:
+    inset 4px 0 0 0 var(--accent),
+    0 4px 16px rgba(255, 107, 157, 0.15);
+  border: 1px solid rgba(255, 107, 157, 0.2);
   transform: translateX(4px);
 }
 .filters ul li.active::before {
-  box-shadow: 0 8px 24px rgba(107, 90, 237, 0.3),
+  box-shadow:
+    0 8px 24px rgba(107, 90, 237, 0.3),
     inset 0 1px 2px rgba(255, 255, 255, 0.5);
   transform: scale(1.15);
 }
@@ -365,7 +388,8 @@
 .filters ul li::before {
   background-size: 200% 200%;
   background-position: 0% 50%;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    all 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     background-position 0.6s ease;
 }
 .filters ul li:hover::before {
@@ -406,11 +430,11 @@
   transform: rotate(180deg);
 }
 .settings h2:hover {
-  background: rgba(107, 90, 237, 0.08);
+  background: rgba(255, 107, 157, 0.08);
   color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107, 90, 237, 0.15);
-  border-color: rgba(107, 90, 237, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.15);
+  border-color: rgba(255, 107, 157, 0.2);
 }
 
 /* Slide-in underline effect for settings */
@@ -421,7 +445,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent), rgba(46, 211, 201, 0.8));
+  background: linear-gradient(90deg, var(--accent), #ffc04d);
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .settings h2:hover::after {
@@ -430,8 +454,10 @@
 
 /* Enhanced sidebar hover effect with glow */
 .sidebar:hover {
-  box-shadow: 0 18px 50px rgba(40, 44, 63, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 0 60px rgba(107, 90, 237, 0.05);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 0 60px rgba(124, 92, 255, 0.1);
 }
 
 /* Responsive tweaks */
@@ -453,8 +479,9 @@
 /* Enhanced Accessibility */
 .filters ul li:focus-visible,
 .settings h2:focus-visible {
-  box-shadow: 0 0 0 4px rgba(107, 90, 237, 0.2),
-    0 4px 16px rgba(107, 90, 237, 0.15);
+  box-shadow:
+    0 0 0 4px rgba(255, 107, 157, 0.2),
+    0 4px 16px rgba(255, 107, 157, 0.15);
   border-radius: 14px;
   outline: none;
 }
