@@ -2,11 +2,11 @@ import Userprofile from "./userprofile";
 import Filters from "./filters";
 import "./sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ onFilterChange }) => {
   return (
     <div className="sidebar">
       <Userprofile />
-      <Filters />
+      <Filters onFilterChange={onFilterChange} />
     </div>
   );
 };
